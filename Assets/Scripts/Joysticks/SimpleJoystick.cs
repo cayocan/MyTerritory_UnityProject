@@ -209,6 +209,11 @@ namespace CnControls
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            if (this.name == "RotationJoystick")
+            {
+                PlayerManager.instance.canShoot = false;
+            }
+
             // When we lift our finger, we reset everything to the initial state
             _baseTransform.anchoredPosition = _initialBasePosition;
             _stickTransform.anchoredPosition = _initialStickPosition;
@@ -225,6 +230,12 @@ namespace CnControls
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            if (this.name == "RotationJoystick")
+            {
+                PlayerManager.instance.canShoot = true;
+            }
+            
+
             // When we press, we first want to snap the joystick to the user's finger
             if (SnapsToFinger)
             {

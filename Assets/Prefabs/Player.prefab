@@ -288,6 +288,12 @@ MonoBehaviour:
   moveSpeed: 300
   rotationPivot: {fileID: 4876376413306332}
   animator: {fileID: 95883254958648026}
+  bullet: {fileID: 54686889581685710, guid: a2c9056bfac2790419af70eadc86005f, type: 2}
+  bulletForce: 2000
+  shotCadency: 0.5
+  rightGunPivot: {fileID: 4132394190274198}
+  leftGunPivot: {fileID: 4718494160707566}
+  canShoot: 0
 --- !u!195 &195907356089474732
 NavMeshAgent:
   m_ObjectHideFlags: 1
