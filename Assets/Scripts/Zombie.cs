@@ -49,7 +49,7 @@ public class Zombie : MonoBehaviour {
     {
         anim.SetTrigger("isDead");
         dead = true;
-        navigation.Stop();
+        navigation.isStopped = true;
         collisor.enabled = false;
     }
 

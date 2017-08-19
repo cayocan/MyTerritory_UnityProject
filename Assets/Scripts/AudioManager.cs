@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 	public static AudioManager instance;
-	
+
+    public Sound[] soundList;
+
 	void AudioManagerSetup()
     {
         foreach (Sound sound in instance.soundList)
