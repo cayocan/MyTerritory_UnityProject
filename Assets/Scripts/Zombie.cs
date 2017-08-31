@@ -29,7 +29,9 @@ public class Zombie : MonoBehaviour {
             navigation.SetDestination(something.position);
         }
         catch (Exception)
-        {}   
+        {
+            navigation.isStopped = true;
+        }  
     }
 
     private void OnTriggerEnter(Collider other)
