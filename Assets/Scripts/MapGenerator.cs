@@ -67,14 +67,7 @@ public class MapGenerator : MonoBehaviour {
     }
 
     void InstantiateTiles(int _height, int _width)
-    {
-        /*
-        foreach (var item in tilesPosition)
-        {
-            Instantiate(testTile, item, Quaternion.identity);
-        }
-        */
-        
+    {       
         for (int h = 0; h < _height; h++)
         {
             for (int w = 0; w < _width; w++)
@@ -86,38 +79,38 @@ public class MapGenerator : MonoBehaviour {
                 //EDGE TESTS
                 if (h == 0 && w == 0)//Upper left edge.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h == 0 && w == _width - 1)//Upper right edge.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h == _height - 1 && _width == 0)//Bottom left edge.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h == _height - 1 && w == _width - 1)//Bottom right edge.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
 
                 //CORNER TESTS
 
                 else if (h == 0 && w != 0 && w != _width - 1)//Upper corner.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h != 0 && h != _height - 1 && w == _width - 1)//Right corner.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h == _height - 1 && w != 0 && w != _width -1)//Bottom corner.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
                 else if (h != 0 && h != _height && w == 0)//Left corner.
                 {
-                    //TODO
+                    Instantiate(testTile, tilePos, Quaternion.identity);
                 }
 
                 //If tilePos is not Edge or Corner.
